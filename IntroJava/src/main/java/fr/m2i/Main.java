@@ -21,6 +21,8 @@ public class Main {
             }
         }
 
+        scanner.close();
+        
         for (int i = 1; i <= 10; i++) {
             System.out.println(String.format("%d x %d = %d", number, i, number * i));
         }
