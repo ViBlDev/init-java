@@ -38,5 +38,17 @@ public abstract class Vehicle {
     public void setPassengerCapacity(int passengerCapacity) {
         this.passengerCapacity = passengerCapacity;
     }
-
+    public abstract void accelerate();
+    public abstract void brake();
+    public void refuel(){
+        currentGas = gasCapacity;
+    }
+    public void drive() throws Exception{
+        if (currentGas < gasConsumption){
+            throw new Exception("pas assez d'essence !");
+        }
+        accelerate();
+        currentGas -= (gasConsumption*speed)/100;
+        System.out.println(String.format("Le véhicule consomme : %f L", gasConsumption));
+    }
 }
