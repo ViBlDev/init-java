@@ -48,7 +48,11 @@ public abstract class Vehicle {
             throw new Exception("pas assez d'essence !");
         }
         accelerate();
-        currentGas -= (gasConsumption*speed)/100;
-        System.out.println(String.format("Le véhicule consomme : %f L", gasConsumption));
+
+        float consumption = (gasConsumption*speed)/100;
+
+        currentGas -= consumption;
+
+        System.out.println(String.format("Le véhicule consomme : %.2f L", gasConsumption));
     }
 }
