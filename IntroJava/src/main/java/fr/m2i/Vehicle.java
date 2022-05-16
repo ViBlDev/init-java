@@ -2,11 +2,15 @@ package fr.m2i;
 
 public abstract class Vehicle {
 
+
+
     protected float currentGas;
     protected float gasCapacity;
     protected float gasConsumption;
     protected int speed;
     protected int passengerCapacity;
+
+    public Vehicle(){}
 
     public float getCurrentGas() {
         return currentGas;
@@ -38,6 +42,7 @@ public abstract class Vehicle {
     public void setPassengerCapacity(int passengerCapacity) {
         this.passengerCapacity = passengerCapacity;
     }
+
     public abstract void accelerate();
     public abstract void brake();
     public void refuel(){
